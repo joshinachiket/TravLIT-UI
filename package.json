@@ -1,0 +1,24 @@
+{
+  "name": "travlit-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshinachiket/TravLIT-UI.git"
+  },
+  "author": "Nachiket Joshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshinachiket/TravLIT-UI/issues"
+  },
+  "homepage": "https://github.com/joshinachiket/TravLIT-UI#readme",
+  "dependencies": {
+    "config": "^3.3.8",
+    "express": "^4.18.2"
+  }
+}
