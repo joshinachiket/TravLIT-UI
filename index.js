@@ -1,14 +1,21 @@
-// Global Variables
-global.rootdir = __dirname;
-global.config = require('config');
+const express = require('express');
+const ejs = require('ejs');
 
-var express = require('express');
-var app = express();
+const app = express();
 
-app.get('/', function (req, res) {
-    res.send("Hello World!")
-})
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+app.use(express.static('public'));
 
-app.listen(config.app.port, function (req, res) {
-    console.log("Travel - Lit Listening On Port: ", config.app.port)
-})
+
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+
+app.use('/', require('./routes/login'));
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server started on port ${PORT}`);
+});
